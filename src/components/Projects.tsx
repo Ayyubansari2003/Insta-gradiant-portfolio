@@ -12,8 +12,8 @@ const Projects = () => {
     {
       title: "Task Manager App",
       description: "A comprehensive task management application built with Angular featuring real-time updates, drag-and-drop functionality, and collaborative features.",
-      tech: ["Angular", "TypeScript", "Node.js", "MongoDB", "Socket.io"],
-      image: "/api/placeholder/400/250",
+      tech: ["Angular", "TypeScript", "Node.js", "Html5", "CSS3"],
+      image: "./i",
       github: "https://github.com/ayyubansari",
       demo: "https://taskmanager-demo.com",
       color: "instagram-royal"

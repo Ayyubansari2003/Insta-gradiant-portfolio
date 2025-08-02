@@ -55,31 +55,31 @@ const About = () => {
               </h3>
               
               <p className="text-lg text-gray-300 leading-relaxed">
-                I'm a passionate Full Stack Developer with expertise in modern web technologies. 
-                My journey in software development is driven by a love for creating innovative 
-                solutions that make a real impact.
+                I am a dedicated Full Stack Developer with hands-on experience in Java, Spring Boot, SQL, Angular, HTML, CSS, and 
+                JavaScript. During my internships at <b>Vista EdTech</b>  and <b>Novitech R&D Pvt Ltd</b> , I worked on developing full-stack web 
+                applications, focusing on REST API development, Angular routing, and SQL integration  </p>
+
+              <p className="text-lg text-gray-300 leading-relaxed">
+               Through real-time projects and collaborative environments, I have enhanced my problem-solving and debugging skills.
+                My training has equipped me with strong front-end and back-end development abilities, preparing me to tackle
+                 industry-level challenges with efficiency.
+
               </p>
 
               <p className="text-lg text-gray-300 leading-relaxed">
-                With strong foundations in both frontend and backend development, I specialize 
-                in crafting seamless user experiences using React, Angular, Java, and Spring Boot. 
-                I believe in writing clean, maintainable code and following industry best practices.
-              </p>
-
-              <p className="text-lg text-gray-300 leading-relaxed">
-                When I'm not coding, you'll find me exploring new technologies, contributing to 
-                open-source projects, or sharing knowledge with the developer community. I'm always 
-                excited about learning and growing in this ever-evolving field.
+                I hold a Bachelor of Arts in <b>Business Administration</b>  from the University of Madras and a Bachelor of Arts in
+                <b>Islamic Studies</b>from B.S. Abdur Rahman Crescent Institute of Science & Technology. With this unique combination 
+                 of technical and analytical knowledge, I strive to create impactful and scalable web solutions.
               </p>
             </div>
 
             <div className="grid grid-cols-2 gap-6">
               <div className="text-center p-6 rounded-lg bg-gradient-to-br from-instagram-royal/20 to-instagram-indigo/20 border border-instagram-royal/30">
-                <div className="text-3xl font-bold gradient-text mb-2">2+</div>
-                <div className="text-sm text-gray-400">Years Experience</div>
+                <div className="text-3xl font-bold gradient-text mb-2">4+ M</div>
+                <div className="text-sm text-gray-400"> Experience</div>
               </div>
               <div className="text-center p-6 rounded-lg bg-gradient-to-br from-instagram-purple/20 to-instagram-magenta/20 border border-instagram-purple/30">
-                <div className="text-3xl font-bold gradient-text mb-2">10+</div>
+                <div className="text-3xl font-bold gradient-text mb-2">5+</div>
                 <div className="text-sm text-gray-400">Projects Completed</div>
               </div>
             </div>

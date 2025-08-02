@@ -218,7 +218,7 @@ const Contact = () => {
                 <Button
                   variant="ghost-gradient"
                   size="sm"
-                  onClick={() => window.open('https://wa.me/1234567890', '_blank')}
+                  onClick={() => window.open('https://wa.me/9488266211', '_blank')}
                 >
                   WhatsApp
                 </Button>
