@@ -17,13 +17,32 @@ const FloatingShape = ({ position, color, shape = 'sphere' }: {
     }
   });
 
-  const ShapeComponent = shape === 'box' ? Box : shape === 'octahedron' ? Octahedron : Sphere;
+  const renderShape = () => {
+    switch (shape) {
+      case 'box':
+        return (
+          <Box ref={meshRef} position={position} args={[0.5, 0.5, 0.5]}>
+            <meshStandardMaterial color={color} transparent opacity={0.6} />
+          </Box>
+        );
+      case 'octahedron':
+        return (
+          <Octahedron ref={meshRef} position={position} args={[0.5, 0]}>
+            <meshStandardMaterial color={color} transparent opacity={0.6} />
+          </Octahedron>
+        );
+      default: // sphere
+        return (
+          <Sphere ref={meshRef} position={position} args={[0.5, 16, 16]}>
+            <meshStandardMaterial color={color} transparent opacity={0.6} />
+          </Sphere>
+        );
+    }
+  };
 
   return (
     <Float speed={2} rotationIntensity={1} floatIntensity={2}>
-      <ShapeComponent ref={meshRef} position={position} args={[0.5, 0.5, 0.5]}>
-        <meshStandardMaterial color={color} transparent opacity={0.6} />
-      </ShapeComponent>
+      {renderShape()}
     </Float>
   );
 };
