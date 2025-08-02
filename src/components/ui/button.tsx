@@ -5,7 +5,7 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils"
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-lg text-sm font-semibold ring-offset-background transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
   {
     variants: {
       variant: {
@@ -18,12 +18,17 @@ const buttonVariants = cva(
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        gradient: "bg-gradient-primary text-white hover:shadow-lg hover:scale-105 gradient-glow",
+        hero: "bg-gradient-full text-white hover:shadow-xl hover:scale-110 animate-pulse-glow border-2 border-transparent bg-clip-padding",
+        cta: "bg-gradient-accent text-white hover:bg-gradient-warm hover:shadow-xl hover:scale-105 transform",
+        "ghost-gradient": "text-white border-2 border-transparent bg-gradient-primary bg-clip-border hover:bg-gradient-secondary hover:scale-105",
       },
       size: {
-        default: "h-10 px-4 py-2",
+        default: "h-12 px-6 py-3",
         sm: "h-9 rounded-md px-3",
-        lg: "h-11 rounded-md px-8",
-        icon: "h-10 w-10",
+        lg: "h-14 rounded-xl px-10 text-lg",
+        icon: "h-12 w-12",
+        hero: "h-16 rounded-2xl px-12 text-xl font-bold",
       },
     },
     defaultVariants: {
