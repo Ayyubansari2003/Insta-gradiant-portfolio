@@ -200,7 +200,7 @@ const Projects = () => {
           <Button
             variant="hero"
             size="lg"
-            onClick={() => window.open('https://github.com/ayyubansari', '_blank')}
+            onClick={() => window.open('https://github.com/Ayyubansari2003', '_blank')}
           >
             <Github className="w-5 h-5 mr-2" />
             View All Projects on GitHub

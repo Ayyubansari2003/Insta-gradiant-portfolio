@@ -6,7 +6,7 @@ const Footer = () => {
     {
       name: "GitHub",
       icon: <Github className="w-6 h-6" />,
-      url: "https://github.com/ayyubansari",
+      url: "https://github.com/Ayyubansari2003",
       color: "instagram-royal"
     },
     {
@@ -24,7 +24,7 @@ const Footer = () => {
     {
       name: "Email",
       icon: <Mail className="w-6 h-6" />,
-      url: "mailto:ayyubansari2003@gmail.com",
+      url: " mailto:ayyubansari2003@gmail.com",
       color: "instagram-orange"
     }
   ];

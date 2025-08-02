@@ -11,65 +11,77 @@ const Contact = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const { toast } = useToast();
-  
+
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
+    name: "",
+    email: "",
+    message: "",
   });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
-    // Create mailto link
+
+    // Prepare mailto link with form data
     const subject = `Portfolio Contact from ${formData.name}`;
     const body = `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`;
-    const mailtoLink = `mailto:ayyubansari2003@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    
+    const mailtoLink = `mailto:ayyubansari2003@gmail.com?subject=${encodeURIComponent(
+      subject
+    )}&body=${encodeURIComponent(body)}`;
+
+    // Open default mail client with the mailto link
     window.open(mailtoLink);
-    
+
+    // Show toast notification
     toast({
       title: "Message Prepared!",
-      description: "Your email client should open with the message ready to send.",
+      description:
+        "Your email client should open with the message ready to send.",
     });
-    
-    // Reset form
-    setFormData({ name: '', email: '', message: '' });
+
+    // Reset form fields
+    setFormData({ name: "", email: "", message: "" });
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData(prev => ({
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setFormData((prev) => ({
       ...prev,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     }));
   };
 
+  // Contact info data for sidebar
   const contactInfo = [
     {
       icon: <Mail className="w-6 h-6" />,
       label: "Email",
       value: "ayyubansari2003@gmail.com",
-      color: "instagram-royal"
+      color: "instagram-royal",
     },
     {
       icon: <Phone className="w-6 h-6" />,
       label: "Phone",
       value: "+91 XXX-XXX-XXXX",
-      color: "instagram-purple"
+      color: "instagram-purple",
     },
     {
       icon: <MapPin className="w-6 h-6" />,
       label: "Location",
       value: "India",
-      color: "instagram-magenta"
-    }
+      color: "instagram-magenta",
+    },
   ];
 
   return (
-    <section id="contact" ref={ref} className="py-32 px-6 relative overflow-hidden">
-      {/* Background Effects */}
+    <section
+      id="contact"
+      ref={ref}
+      className="py-32 px-6 relative overflow-hidden text-white"
+    >
+      {/* Background Gradient */}
       <div className="absolute inset-0 bg-gradient-to-tr from-instagram-orange/10 via-transparent to-instagram-gold/10" />
-      
+
       <div className="max-w-7xl mx-auto relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -82,7 +94,8 @@ const Contact = () => {
           </h2>
           <div className="h-1 w-24 bg-gradient-accent mx-auto rounded-full mb-8" />
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            Ready to bring your ideas to life? Let's build something amazing together!
+            Ready to bring your ideas to life? Let's build something amazing
+            together!
           </p>
         </motion.div>
 
@@ -95,52 +108,42 @@ const Contact = () => {
             className="space-y-8"
           >
             <div>
-              <h3 className="text-3xl font-bold text-white mb-4">
-                Send me a message
-              </h3>
+              <h3 className="text-3xl font-bold mb-4">Send me a message</h3>
               <p className="text-gray-400 mb-8">
-                Have a project in mind? I'd love to hear about it. Send me a message 
-                and let's discuss how we can work together.
+                Have a project in mind? I'd love to hear about it. Send me a
+                message and let's discuss how we can work together.
               </p>
             </div>
 
             <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="space-y-4">
-                <div>
-                  <Input
-                    name="name"
-                    placeholder="Your Name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    className="bg-white/5 border-white/20 text-white placeholder:text-gray-400 focus:border-instagram-purple h-12"
-                  />
-                </div>
-                
-                <div>
-                  <Input
-                    name="email"
-                    type="email"
-                    placeholder="Your Email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="bg-white/5 border-white/20 text-white placeholder:text-gray-400 focus:border-instagram-purple h-12"
-                  />
-                </div>
-                
-                <div>
-                  <Textarea
-                    name="message"
-                    placeholder="Your Message"
-                    rows={6}
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                    className="bg-white/5 border-white/20 text-white placeholder:text-gray-400 focus:border-instagram-purple resize-none"
-                  />
-                </div>
-              </div>
+              <Input
+                name="name"
+                placeholder="Your Name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+                className="bg-white/5 border-white/20 text-white placeholder:text-gray-400 focus:border-instagram-purple h-12"
+              />
+
+              <Input
+                name="email"
+                type="email"
+                placeholder="Your Email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+                className="bg-white/5 border-white/20 text-white placeholder:text-gray-400 focus:border-instagram-purple h-12"
+              />
+
+              <Textarea
+                name="message"
+                placeholder="Your Message"
+                rows={6}
+                value={formData.message}
+                onChange={handleChange}
+                required
+                className="bg-white/5 border-white/20 text-white placeholder:text-gray-400 focus:border-instagram-purple resize-none"
+              />
 
               <Button
                 type="submit"
@@ -162,12 +165,10 @@ const Contact = () => {
             className="space-y-8"
           >
             <div>
-              <h3 className="text-3xl font-bold text-white mb-4">
-                Get in touch
-              </h3>
+              <h3 className="text-3xl font-bold mb-4">Get in touch</h3>
               <p className="text-gray-400 mb-8">
-                Prefer a more direct approach? Feel free to reach out through any 
-                of these channels. I'm always happy to connect!
+                Prefer a more direct approach? Feel free to reach out through
+                any of these channels. I'm always happy to connect!
               </p>
             </div>
 
@@ -176,14 +177,16 @@ const Contact = () => {
                 <motion.div
                   key={info.label}
                   initial={{ opacity: 0, y: 20 }}
-                  animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                  transition={{ duration: 0.6, delay: 0.6 + (index * 0.1) }}
+                  animate={
+                    isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
+                  }
+                  transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
                   className="flex items-center space-x-4 p-4 rounded-lg bg-white/5 border border-white/10 hover:border-white/20 transition-all duration-300 hover:scale-105"
                 >
-                  <div className={`p-3 rounded-xl bg-gradient-to-br from-${info.color}/20 to-${info.color}/10`}>
-                    <div className={`text-${info.color}`}>
-                      {info.icon}
-                    </div>
+                  <div
+                    className={`p-3 rounded-xl bg-gradient-to-br from-${info.color}/20 to-${info.color}/10`}
+                  >
+                    <div className={`text-${info.color}`}>{info.icon}</div>
                   </div>
                   <div>
                     <h4 className="text-white font-semibold">{info.label}</h4>
@@ -204,21 +207,25 @@ const Contact = () => {
                 Let's build something amazing together!
               </h4>
               <p className="text-gray-300 mb-6">
-                Whether it's a web application, mobile app, or any digital solution, 
-                I'm here to help turn your vision into reality.
+                Whether it's a web application, mobile app, or any digital
+                solution, I'm here to help turn your vision into reality.
               </p>
               <div className="flex space-x-4">
                 <Button
                   variant="cta"
                   size="sm"
-                  onClick={() => window.open('mailto:ayyubansari2003@gmail.com', '_blank')}
+                  onClick={() =>
+                    window.open("mailto:ayyubansari2003@gmail.com", "_blank")
+                  }
                 >
                   Quick Email
                 </Button>
                 <Button
                   variant="ghost-gradient"
                   size="sm"
-                  onClick={() => window.open('https://wa.me/9488266211', '_blank')}
+                  onClick={() =>
+                    window.open("https://wa.me/9488266211", "_blank")
+                  }
                 >
                   WhatsApp
                 </Button>
