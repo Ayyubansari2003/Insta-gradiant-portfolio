@@ -1,5 +1,5 @@
 import { Canvas, useFrame } from '@react-three/fiber';
-import { Float, Sphere, Box, Octahedron } from '@react-three/drei';
+import { Float } from '@react-three/drei';
 import { useRef } from 'react';
 import * as THREE from 'three';
 
@@ -18,24 +18,29 @@ const FloatingShape = ({ position, color, shape = 'sphere' }: {
   });
 
   const renderShape = () => {
+    const material = <meshStandardMaterial color={color} transparent opacity={0.6} />;
+    
     switch (shape) {
       case 'box':
         return (
-          <Box ref={meshRef} position={position} args={[0.5, 0.5, 0.5]}>
-            <meshStandardMaterial color={color} transparent opacity={0.6} />
-          </Box>
+          <mesh ref={meshRef} position={position}>
+            <boxGeometry args={[0.5, 0.5, 0.5]} />
+            {material}
+          </mesh>
         );
       case 'octahedron':
         return (
-          <Octahedron ref={meshRef} position={position} args={[0.5, 0]}>
-            <meshStandardMaterial color={color} transparent opacity={0.6} />
-          </Octahedron>
+          <mesh ref={meshRef} position={position}>
+            <octahedronGeometry args={[0.5, 0]} />
+            {material}
+          </mesh>
         );
       default: // sphere
         return (
-          <Sphere ref={meshRef} position={position} args={[0.5, 16, 16]}>
-            <meshStandardMaterial color={color} transparent opacity={0.6} />
-          </Sphere>
+          <mesh ref={meshRef} position={position}>
+            <sphereGeometry args={[0.5, 16, 16]} />
+            {material}
+          </mesh>
         );
     }
   };
