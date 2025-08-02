@@ -26,33 +26,33 @@ const Skills = () => {
     {
       category: "Backend",
       icon: <Server className="w-8 h-8" />,
-      skills: ["Java", "Spring Boot", "Node.js", "Express.js", "RESTful APIs", "Microservices"],
+      skills: ["Java", "Spring Boot", "Node.js", "RESTful APIs","SQL" ],
       color: "instagram-purple"
     },
-    {
-      category: "Database",
-      icon: <Database className="w-8 h-8" />,
-      skills: ["MySQL", "PostgreSQL", "MongoDB", "SQL", "Database Design", "Data Modeling"],
-      color: "instagram-magenta"
-    },
+    // {
+    //   category: "Database",
+    //   icon: <Database className="w-8 h-8" />,
+    //   skills: [ "SQL"],
+    //   color: "instagram-magenta"
+    // },
     {
       category: "Tools & DevOps",
       icon: <GitBranch className="w-8 h-8" />,
-      skills: ["Git", "GitHub", "GitLab", "VS Code", "Postman", "Docker", "AWS", "CI/CD"],
+      skills: ["Git", "GitHub", "GitLab", "VS Code", "Postman"],
       color: "instagram-pink"
     },
-    {
-      category: "Mobile",
-      icon: <Smartphone className="w-8 h-8" />,
-      skills: ["React Native", "Flutter", "Progressive Web Apps", "Responsive Design"],
-      color: "instagram-orange"
-    },
-    {
-      category: "Concepts",
-      icon: <Code2 className="w-8 h-8" />,
-      skills: ["OOP", "Design Patterns", "Clean Code", "Debugging", "Testing", "Agile"],
-      color: "instagram-gold"
-    }
+    // {
+    //   category: "Mobile",
+    //   icon: <Smartphone className="w-8 h-8" />,
+    //   skills: ["React Native", "Flutter", "Progressive Web Apps", "Responsive Design"],
+    //   color: "instagram-orange"
+    // },
+    // {
+    //   category: "Concepts",
+    //   icon: <Code2 className="w-8 h-8" />,
+    //   skills: ["OOP", "Design Patterns", "Clean Code", "Debugging", "Testing", "Agile"],
+    //   color: "instagram-gold"
+    // }
   ];
 
   return (
@@ -132,7 +132,7 @@ const Skills = () => {
             className="text-center"
           >
             <div className="flex flex-wrap justify-center gap-4 max-w-4xl">
-              {["React", "Angular", "Java", "Spring Boot", "TypeScript", "Node.js", "MongoDB", "AWS", "Docker", "Git"].map((tech, index) => (
+              {["React", "Angular", "Java", "Spring Boot", "TypeScript","JavaScript", "Node.js", "Html", "Css", "Git"].map((tech, index) => (
                 <motion.span
                   key={tech}
                   initial={{ opacity: 0, scale: 0 }}
