@@ -13,7 +13,7 @@ const Projects = () => {
       title: "Task Manager App",
       description: "A comprehensive task management application built with Angular featuring real-time updates, drag-and-drop functionality, and collaborative features.",
       tech: ["Angular", "TypeScript", "Node.js", "Html5", "CSS3"],
-      image: "./i",
+      image: "/task-management.png",  // <-- This Image will render
       github: "https://github.com/ayyubansari",
       demo: "https://taskmanager-demo.com",
       color: "instagram-royal"
@@ -22,7 +22,7 @@ const Projects = () => {
       title: "Electricity Bill Generator",
       description: "Java-based desktop application for generating and managing electricity bills with advanced calculations and report generation features.",
       tech: ["Java", "Swing", "MySQL", "JasperReports"],
-      image: "/api/placeholder/400/250",
+      image: "",  // No Image — Initials fallback
       github: "https://github.com/ayyubansari",
       demo: "#",
       color: "instagram-purple"
@@ -31,7 +31,7 @@ const Projects = () => {
       title: "Portfolio Website",
       description: "Modern, responsive portfolio website showcasing projects and skills with stunning animations and interactive elements.",
       tech: ["Angular", "SCSS", "TypeScript", "Animations"],
-      image: "/api/placeholder/400/250",
+      image: "",  // No Image — Initials fallback
       github: "https://github.com/ayyubansari",
       demo: "https://ayyubansari.dev",
       color: "instagram-magenta"
@@ -40,7 +40,7 @@ const Projects = () => {
       title: "Text-to-Speech Web App",
       description: "Progressive web application that converts text to speech with multiple voice options and customizable speech parameters.",
       tech: ["JavaScript", "Web Speech API", "PWA", "CSS3"],
-      image: "/api/placeholder/400/250",
+      image: "",
       github: "https://github.com/ayyubansari",
       demo: "https://tts-app-demo.com",
       color: "instagram-pink"
@@ -49,7 +49,7 @@ const Projects = () => {
       title: "QR Code Generator",
       description: "Dynamic QR code generator with customization options, batch processing, and multiple output formats for various use cases.",
       tech: ["JavaScript", "Canvas API", "HTML5", "CSS3"],
-      image: "/api/placeholder/400/250",
+      image: "",
       github: "https://github.com/ayyubansari",
       demo: "https://qr-generator-demo.com",
       color: "instagram-orange"
@@ -58,7 +58,7 @@ const Projects = () => {
       title: "Web Calculator",
       description: "Advanced web calculator with scientific functions, history tracking, and keyboard support for enhanced user experience.",
       tech: ["JavaScript", "CSS3", "HTML5", "Local Storage"],
-      image: "/api/placeholder/400/250",
+      image: "",
       github: "https://github.com/ayyubansari",
       demo: "https://calculator-demo.com",
       color: "instagram-gold"
@@ -71,6 +71,7 @@ const Projects = () => {
       <div className="absolute inset-0 bg-gradient-to-bl from-instagram-purple/10 via-transparent to-instagram-pink/10" />
       
       <div className="max-w-7xl mx-auto relative z-10">
+        {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
@@ -87,6 +88,7 @@ const Projects = () => {
           </p>
         </motion.div>
 
+        {/* Projects Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <motion.div
@@ -97,18 +99,24 @@ const Projects = () => {
               className="group relative"
             >
               <div className="h-full rounded-2xl overflow-hidden bg-gradient-to-br from-black/60 to-black/30 border border-white/10 backdrop-blur-sm hover:border-white/20 transition-all duration-500 hover:scale-105 hover:shadow-2xl">
-                {/* Project Image */}
-                <div className="relative h-48 overflow-hidden">
-                  <div className={`absolute inset-0 bg-gradient-to-br from-${project.color}/20 to-${project.color}/5`} />
-                  <div className="absolute inset-0 flex items-center justify-center">
+                
+                {/* Project Image / Initials */}
+                <div className="relative h-48 overflow-hidden flex items-center justify-center bg-black/30">
+                  {project.image ? (
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-105"
+                    />
+                  ) : (
                     <div className={`w-20 h-20 rounded-full bg-gradient-to-br from-${project.color} to-${project.color}/60 flex items-center justify-center`}>
                       <span className="text-2xl font-bold text-white">
                         {project.title.split(' ').map(word => word[0]).join('').slice(0, 2)}
                       </span>
                     </div>
-                  </div>
-                  
-                  {/* Overlay on hover */}
+                  )}
+
+                  {/* Hover Overlay Buttons */}
                   <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-4">
                     <Button
                       variant="ghost-gradient"
@@ -179,7 +187,7 @@ const Projects = () => {
           ))}
         </div>
 
-        {/* Call to Action */}
+        {/* Call to Action Button */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
