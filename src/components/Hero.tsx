@@ -46,7 +46,7 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.7 }}
           className="text-xl md:text-2xl text-gray-300 mb-8 font-light"
         >
-          Full Stack Developer | Building modern web solutions
+          Full Stack Developer | Building modern web solutions 
         </motion.p>
 
         <motion.p
@@ -56,7 +56,7 @@ const Hero = () => {
           className="text-lg text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed"
         >
           Passionate about creating innovative digital experiences with cutting-edge technologies.
-          Specializing in React, Angular, Java, and modern web development.
+          Specializing in React Js, Angular Js, Java, and modern web development.
         </motion.p>
 
         <motion.div
