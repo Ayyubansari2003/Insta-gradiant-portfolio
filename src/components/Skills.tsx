@@ -29,35 +29,19 @@ const Skills = () => {
       skills: ["Java", "Spring Boot", "Node.js", "RESTful APIs","SQL" ],
       color: "instagram-purple"
     },
-    // {
-    //   category: "Database",
-    //   icon: <Database className="w-8 h-8" />,
-    //   skills: [ "SQL"],
-    //   color: "instagram-magenta"
-    // },
+   
     {
       category: "Tools & DevOps",
       icon: <GitBranch className="w-8 h-8" />,
       skills: ["Git", "GitHub", "GitLab", "VS Code", "Postman"],
       color: "instagram-pink"
     },
-    // {
-    //   category: "Mobile",
-    //   icon: <Smartphone className="w-8 h-8" />,
-    //   skills: ["React Native", "Flutter", "Progressive Web Apps", "Responsive Design"],
-    //   color: "instagram-orange"
-    // },
-    // {
-    //   category: "Concepts",
-    //   icon: <Code2 className="w-8 h-8" />,
-    //   skills: ["OOP", "Design Patterns", "Clean Code", "Debugging", "Testing", "Agile"],
-    //   color: "instagram-gold"
-    // }
+    
   ];
 
   return (
     <section ref={ref} className="py-32 px-6 relative overflow-hidden">
-      {/* Background Effects */}
+      
       <div className="absolute inset-0 bg-gradient-to-tr from-instagram-royal/5 via-instagram-purple/5 to-instagram-magenta/5" />
       
       <div className="max-w-7xl mx-auto relative z-10">
@@ -87,7 +71,7 @@ const Skills = () => {
               className="group relative"
             >
               <div className="h-full p-8 rounded-2xl bg-gradient-to-br from-black/40 to-black/20 border border-white/10 backdrop-blur-sm hover:border-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl">
-                {/* Glowing background effect */}
+               
                 <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br from-${skillSet.color}/10 to-${skillSet.color}/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
                 
                 <div className="relative z-10">
