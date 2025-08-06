@@ -31,15 +31,15 @@ const Footer = () => {
 
   return (
     <footer className="relative py-16 px-6 overflow-hidden">
-      {/* Gradient Separator */}
+     
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-full" />
       
-      {/* Background Effects */}
+      
       <div className="absolute inset-0 bg-gradient-to-t from-instagram-purple/5 via-transparent to-transparent" />
       
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center">
-          {/* Logo and Name */}
+        
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -59,7 +59,7 @@ const Footer = () => {
             </p>
           </motion.div>
 
-          {/* Social Links */}
+         
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -82,10 +82,10 @@ const Footer = () => {
                   </div>
                 </div>
                 
-                {/* Glow Effect */}
+               
                 <div className={`absolute -inset-1 rounded-xl bg-gradient-to-r from-${social.color}/30 to-${social.color}/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 blur-sm`} />
                 
-                {/* Tooltip */}
+               
                 <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-black/90 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
                   {social.name}
                 </div>
@@ -93,7 +93,7 @@ const Footer = () => {
             ))}
           </motion.div>
 
-          {/* Quick Links */}
+        
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -114,7 +114,7 @@ const Footer = () => {
             ))}
           </motion.div>
 
-          {/* Copyright */}
+         
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}

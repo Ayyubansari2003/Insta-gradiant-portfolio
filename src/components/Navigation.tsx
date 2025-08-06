@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Menu, X, Home, User, Code, Briefcase, MessageCircle } from "lucide-react";
-import { Button } from "@/components/ui/button";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,11 +15,11 @@ const Navigation = () => {
     { id: 'contact', label: 'Contact', icon: <MessageCircle className="w-4 h-4" /> },
   ];
 
+  // Scroll Spy to highlight active section
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
-      
-      // Update active section based on scroll position
+
       const sections = navItems.map(item => item.id);
       const current = sections.find(section => {
         const element = document.getElementById(section);
@@ -30,7 +29,7 @@ const Navigation = () => {
         }
         return false;
       });
-      
+
       if (current) {
         setActiveSection(current);
       }
@@ -40,12 +39,13 @@ const Navigation = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollToSection = (sectionId: string) => {
+  // Scroll to Section and Close Mobile Menu
+  const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
-    setIsOpen(false);
+    setIsOpen(false); // Auto-close after click
   };
 
   return (
@@ -76,7 +76,7 @@ const Navigation = () => {
             </span>
           </motion.div>
 
-          {/* Desktop Navigation */}
+          {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-1">
             {navItems.map((item) => (
               <motion.button
@@ -96,7 +96,7 @@ const Navigation = () => {
             ))}
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Hamburger Icon */}
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -107,7 +107,7 @@ const Navigation = () => {
           </motion.button>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Mobile Dropdown Menu */}
         <motion.div
           initial={false}
           animate={{ height: isOpen ? 'auto' : 0, opacity: isOpen ? 1 : 0 }}

@@ -19,7 +19,7 @@ const Hero = () => {
       <ParticleBackground />
       <ThreeBackground />
       
-      {/* Gradient overlay */}
+      
       <div className="absolute inset-0 bg-gradient-to-br from-black/50 via-transparent to-black/70 z-10" />
       
       <motion.div

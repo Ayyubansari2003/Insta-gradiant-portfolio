@@ -8,7 +8,7 @@ const About = () => {
 
   return (
     <section ref={ref} className="py-32 px-6 relative overflow-hidden">
-      {/* Background gradient */}
+      
       <div className="absolute inset-0 bg-gradient-to-br from-instagram-purple/10 via-transparent to-instagram-pink/10" />
       
       <div className="max-w-7xl mx-auto relative z-10">

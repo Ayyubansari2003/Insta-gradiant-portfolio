@@ -21,24 +21,24 @@ const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    // Prepare mailto link with form data
+   
     const subject = `Portfolio Contact from ${formData.name}`;
     const body = `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`;
     const mailtoLink = `mailto:ayyubansari2003@gmail.com?subject=${encodeURIComponent(
       subject
     )}&body=${encodeURIComponent(body)}`;
 
-    // Open default mail client with the mailto link
+    
     window.open(mailtoLink);
 
-    // Show toast notification
+  
     toast({
       title: "Message Prepared!",
       description:
         "Your email client should open with the message ready to send.",
     });
 
-    // Reset form fields
+  
     setFormData({ name: "", email: "", message: "" });
   };
 
@@ -51,7 +51,7 @@ const Contact = () => {
     }));
   };
 
-  // Contact info data for sidebar
+
   const contactInfo = [
     {
       icon: <Mail className="w-6 h-6" />,
@@ -79,7 +79,7 @@ const Contact = () => {
       ref={ref}
       className="py-32 px-6 relative overflow-hidden text-white"
     >
-      {/* Background Gradient */}
+      
       <div className="absolute inset-0 bg-gradient-to-tr from-instagram-orange/10 via-transparent to-instagram-gold/10" />
 
       <div className="max-w-7xl mx-auto relative z-10">
@@ -100,7 +100,7 @@ const Contact = () => {
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-16 items-start">
-          {/* Contact Form */}
+         
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
@@ -157,7 +157,7 @@ const Contact = () => {
             </form>
           </motion.div>
 
-          {/* Contact Info */}
+         
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
@@ -196,7 +196,7 @@ const Contact = () => {
               ))}
             </div>
 
-            {/* Call to Action */}
+            
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}

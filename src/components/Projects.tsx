@@ -13,25 +13,43 @@ const Projects = () => {
       title: "Task Manager App",
       description: "A comprehensive task management application built with Angular featuring real-time updates, drag-and-drop functionality, and collaborative features.",
       tech: ["Angular", "TypeScript", "Node.js", "Html5", "CSS3"],
-      image: "/task-management.png",  // <-- This Image will render
+      image: "/task-management.png", 
       github: "https://github.com/ayyubansari",
       demo: "https://taskmanager-demo.com",
       color: "instagram-royal"
     },
     {
-      title: "Electricity Bill Generator",
-      description: "Java-based desktop application for generating and managing electricity bills with advanced calculations and report generation features.",
-      tech: ["Java", "Swing", "MySQL", "JasperReports"],
-      image: "",  // No Image — Initials fallback
+      title: "Text To Speech App",
+      description: " This website makes it easy to turn your text into speech. Just type or paste your text into the box, choose a voice, and click the button.",
+      tech: ["Html", "Css", "JS", "Web Speech API"],
+      image: "Text -Speek.png",  
       github: "https://github.com/ayyubansari",
-      demo: "#",
+      demo: "https://ayyubansari2003.github.io/Text-To-Speech-project/",
       color: "instagram-purple"
+    },
+    {
+      title: "QR Code Generator",
+      description: "Dynamic QR code generator with customization options, batch processing, and multiple output formats for various use cases.",
+      tech: ["JavaScript", "Canvas API", "HTML5", "CSS3"],
+      image: "QR- generator.png",
+      github: "https://github.com/ayyubansari",
+      demo: "https://ayyubansari2003.github.io/QR-code/",
+      color: "instagram-orange"
+    },
+    {
+      title: "Web Calculator",
+      description: "Advanced web calculator with scientific functions, history tracking, and keyboard support for enhanced user experience.",
+      tech: ["JavaScript", "CSS3", "HTML5", "Local Storage"],
+      image: "calculater.png",
+      github: "https://github.com/ayyubansari",
+      demo: "https://ayyubansari2003.github.io/simple-calculator/",
+      color: "instagram-gold"
     },
     {
       title: "Portfolio Website",
       description: "Modern, responsive portfolio website showcasing projects and skills with stunning animations and interactive elements.",
       tech: ["Angular", "SCSS", "TypeScript", "Animations"],
-      image: "",  // No Image — Initials fallback
+      image: "", 
       github: "https://github.com/ayyubansari",
       demo: "https://ayyubansari.dev",
       color: "instagram-magenta"
@@ -45,33 +63,16 @@ const Projects = () => {
       demo: "https://tts-app-demo.com",
       color: "instagram-pink"
     },
-    {
-      title: "QR Code Generator",
-      description: "Dynamic QR code generator with customization options, batch processing, and multiple output formats for various use cases.",
-      tech: ["JavaScript", "Canvas API", "HTML5", "CSS3"],
-      image: "",
-      github: "https://github.com/ayyubansari",
-      demo: "https://qr-generator-demo.com",
-      color: "instagram-orange"
-    },
-    {
-      title: "Web Calculator",
-      description: "Advanced web calculator with scientific functions, history tracking, and keyboard support for enhanced user experience.",
-      tech: ["JavaScript", "CSS3", "HTML5", "Local Storage"],
-      image: "",
-      github: "https://github.com/ayyubansari",
-      demo: "https://calculator-demo.com",
-      color: "instagram-gold"
-    }
+    
   ];
 
   return (
     <section id="projects" ref={ref} className="py-32 px-6 relative overflow-hidden">
-      {/* Background Effects */}
+    
       <div className="absolute inset-0 bg-gradient-to-bl from-instagram-purple/10 via-transparent to-instagram-pink/10" />
       
       <div className="max-w-7xl mx-auto relative z-10">
-        {/* Section Header */}
+       
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
@@ -88,7 +89,7 @@ const Projects = () => {
           </p>
         </motion.div>
 
-        {/* Projects Grid */}
+        
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <motion.div
@@ -100,7 +101,7 @@ const Projects = () => {
             >
               <div className="h-full rounded-2xl overflow-hidden bg-gradient-to-br from-black/60 to-black/30 border border-white/10 backdrop-blur-sm hover:border-white/20 transition-all duration-500 hover:scale-105 hover:shadow-2xl">
                 
-                {/* Project Image / Initials */}
+                
                 <div className="relative h-48 overflow-hidden flex items-center justify-center bg-black/30">
                   {project.image ? (
                     <img
@@ -116,7 +117,7 @@ const Projects = () => {
                     </div>
                   )}
 
-                  {/* Hover Overlay Buttons */}
+               
                   <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-4">
                     <Button
                       variant="ghost-gradient"
@@ -135,7 +136,7 @@ const Projects = () => {
                   </div>
                 </div>
 
-                {/* Project Content */}
+               
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-white mb-3 group-hover:gradient-text transition-all duration-300">
                     {project.title}
@@ -145,7 +146,7 @@ const Projects = () => {
                     {project.description}
                   </p>
 
-                  {/* Tech Stack */}
+                
                   <div className="flex flex-wrap gap-2 mb-6">
                     {project.tech.map((tech) => (
                       <span
@@ -157,7 +158,7 @@ const Projects = () => {
                     ))}
                   </div>
 
-                  {/* Action Buttons */}
+                  
                   <div className="flex space-x-3">
                     <Button
                       variant="outline"
@@ -180,14 +181,14 @@ const Projects = () => {
                   </div>
                 </div>
 
-                {/* Glow Effect */}
+                
                 <div className={`absolute -inset-0.5 rounded-2xl bg-gradient-to-r from-${project.color}/50 to-${project.color}/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10 blur-sm`} />
               </div>
             </motion.div>
           ))}
         </div>
 
-        {/* Call to Action Button */}
+       
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
