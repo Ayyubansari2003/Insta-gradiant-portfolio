@@ -55,12 +55,12 @@ const Projects = () => {
       color: "instagram-magenta"
     },
     {
-      title: "Text-to-Speech Web App",
-      description: "Progressive web application that converts text to speech with multiple voice options and customizable speech parameters.",
-      tech: ["JavaScript", "Web Speech API", "PWA", "CSS3"],
-      image: "",
+      title: "NetFlix Clone",
+      description: "Built a Netflix front-page clone with a focus on responsive design and dynamic content loading.",
+      tech: ["Html", "CSS"],
+      image: "netflixclone.png",
       github: "https://github.com/ayyubansari",
-      demo: "https://tts-app-demo.com",
+      demo: "https://t9xpmcanahctpa1huovqna.on.drv.tw/netflix/Netflix%20Clone/Html/",
       color: "instagram-pink"
     },
     
