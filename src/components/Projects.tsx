@@ -19,7 +19,7 @@ const Projects = () => {
       color: "instagram-royal"
     },
     {
-      title: "Text To Speech App",
+      title: "Text-to-Speech Web App",
       description: " This website makes it easy to turn your text into speech. Just type or paste your text into the box, choose a voice, and click the button.",
       tech: ["Html", "Css", "JS", "Web Speech API"],
       image: "Text -Speek.png",  
@@ -42,16 +42,16 @@ const Projects = () => {
       tech: ["JavaScript", "CSS3", "HTML5", "Local Storage"],
       image: "calculater.png",
       github: "https://github.com/ayyubansari",
-      demo: "https://ayyubansari2003.github.io/simple-calculator/",
+      demo: "https://whimsical-ganache-9cfdcd.netlify.app/",
       color: "instagram-gold"
     },
     {
       title: "Portfolio Website",
-      description: "Modern, responsive portfolio website showcasing projects and skills with stunning animations and interactive elements.",
-      tech: ["Angular", "SCSS", "TypeScript", "Animations"],
-      image: "", 
+      description: "Modern and simple , responsive portfolio website showcasing projects and skills with some sliding animation interactive elements.",
+      tech: ["Html", "CSS", "JavaScript", ],
+      image: "Portfolio-img.png", 
       github: "https://github.com/ayyubansari",
-      demo: "https://ayyubansari.dev",
+      demo: "https://ayyubansari2003.github.io/portfolio/",
       color: "instagram-magenta"
     },
     {

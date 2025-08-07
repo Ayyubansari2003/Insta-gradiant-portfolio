@@ -74,10 +74,10 @@ const About = () => {
             </div>
 
             <div className="grid grid-cols-2 gap-6">
-              <div className="text-center p-6 rounded-lg bg-gradient-to-br from-instagram-royal/20 to-instagram-indigo/20 border border-instagram-royal/30">
+              {/* <div className="text-center p-6 rounded-lg bg-gradient-to-br from-instagram-royal/20 to-instagram-indigo/20 border border-instagram-royal/30">
                 <div className="text-3xl font-bold gradient-text mb-2">4+ M</div>
                 <div className="text-sm text-gray-400"> Experience</div>
-              </div>
+              </div> */}
               <div className="text-center p-6 rounded-lg bg-gradient-to-br from-instagram-purple/20 to-instagram-magenta/20 border border-instagram-purple/30">
                 <div className="text-3xl font-bold gradient-text mb-2">5+</div>
                 <div className="text-sm text-gray-400">Projects Completed</div>

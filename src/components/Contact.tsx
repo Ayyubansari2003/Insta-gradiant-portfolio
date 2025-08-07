@@ -62,7 +62,7 @@ const Contact = () => {
     {
       icon: <Phone className="w-6 h-6" />,
       label: "Phone",
-      value: "+91 XXX-XXX-XXXX",
+      value: "+91 948-826-6211",
       color: "instagram-purple",
     },
     {
