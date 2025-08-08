@@ -39,14 +39,18 @@ const Navigation = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Scroll to Section and Close Mobile Menu
-  const scrollToSection = (sectionId) => {
+  
+ const scrollToSection = (sectionId) => {
+  setIsOpen(false); 
+  
+  
+  setTimeout(() => {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
-    setIsOpen(false); // Auto-close after click
-  };
+  }, 100); 
+};
 
   return (
     <motion.nav

@@ -11,14 +11,22 @@ const Hero = () => {
   };
 
   const downloadResume = () => {
-    console.log("Downloading resume...");
+    // உங்கள் ரெஸ்யூம் ஃபைலின் பெயரை இங்கு குறிப்பிடவும்
+    const resumeUrl = '/Ayyub_Ansari_Resume.pdf'; 
+    
+    // ஒரு மறைவான 'a' டேக் உருவாக்கி, அதை கிளிக் செய்து டவுன்லோட் செய்கிறது
+    const link = document.createElement('a');
+    link.href = resumeUrl;
+    link.download = 'Ayyub Ansari_Resume.pdf'; // டவுன்லோட் ஆகும் ஃபைலின் பெயர்
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <ParticleBackground />
       <ThreeBackground />
-      
       
       <div className="absolute inset-0 bg-gradient-to-br from-black/50 via-transparent to-black/70 z-10" />
       
