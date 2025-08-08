@@ -11,10 +11,10 @@ const Hero = () => {
   };
 
   const downloadResume = () => {
-    // உங்கள் ரெஸ்யூம் ஃபைலின் பெயரை இங்கு குறிப்பிடவும்
-    const resumeUrl = '/Ayyub_Ansari_Resume.pdf'; 
     
-    // ஒரு மறைவான 'a' டேக் உருவாக்கி, அதை கிளிக் செய்து டவுன்லோட் செய்கிறது
+    const resumeUrl = '/Ayyub Ansari_Resume.pdf'; 
+    
+    
     const link = document.createElement('a');
     link.href = resumeUrl;
     link.download = 'Ayyub Ansari_Resume.pdf'; // டவுன்லோட் ஆகும் ஃபைலின் பெயர்
